@@ -6,7 +6,7 @@ environment_variables:
 containers:
     LambdaFunctions:
         phases:
-            during_build:
+            during_build: 
                 commands:
                     - npm install
                     - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
